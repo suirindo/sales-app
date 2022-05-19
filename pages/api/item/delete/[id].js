@@ -1,6 +1,6 @@
-import req from "express/lib/request";
 import connectDB from "../../../../utils/database";
 import { ItemModel } from "../../../../utils/schemaModels";
+import auth from "../../../../utils/auth";
 
 const deleteItem = async(req, res) => {
     try{
@@ -12,4 +12,4 @@ const deleteItem = async(req, res) => {
     }
 }
 
-export default deleteItem
+export default auth(deleteItem)
