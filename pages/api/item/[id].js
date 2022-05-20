@@ -1,5 +1,5 @@
 import connectDB from "../../../utils/database"
-import { ItemModel } from "../../../../utils/schemaModels";
+import { ItemModel } from "../../../utils/schemaModels";
 
 const getSingleItem = async (req, res) => {
     try{
