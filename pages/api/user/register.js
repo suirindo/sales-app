@@ -11,4 +11,4 @@ const registerUser = async (req, res) => {
         return res.status(400).json({message: "ユーザー登録失敗"})
     }
 }
-export default registerUser 
+export default registerUser
