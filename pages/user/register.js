@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Head from "next/head"
 
 const Register = () => {
     const [name, setName ] = useState("")
@@ -28,13 +29,13 @@ const Register = () => {
     }
     return (
         <div>
-            <h1>ユーザー登録</h1>
+            <Head><title>ユーザー登録</title></Head>
+            <h1 className = "page-title">ユーザー登録</h1>
             <form onSubmit = { handleSubmit }>
                 <input value = {name} onChange={(event) => setName(event.target.value)} type = "text" name="name" placeholder = "名前" required/>
                 <input value = {email} onChange={(event) => setEmail (event.target.value)} type = "text" name="email" placeholder = "メールアドレス" required/>
                 <input value = {password} onChange= {(event) => setPassword(event.target.value)} type = "text" name= "password" placeholder = "パスワード" required/>
                 <button>登録</button>
-
             </form>
         </div>
     )
