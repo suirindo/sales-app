@@ -1,5 +1,6 @@
 import Image from "next/image"
 import useAuth from "../../../utils/useAuth"
+import Head from "next/head"
 
 const DeleteItem = (props) => {
     const handleSubmit = async(event) => {
@@ -23,8 +24,9 @@ const DeleteItem = (props) => {
     const loginUser = useAuth()
     if(loginUser === props.singleItem.email){
         return (
-            <div>
-                <h1>アイテム削除</h1>
+            <div className="delete-page">
+                <Head><title>アイテム削除</title></Head>
+                <h1 className="page-title">アイテム削除</h1>
                 <form onSubmit={handleSubmit}>
                    <h2>{props.singleItem.title}</h2>
                    <Image src={props.singleItem.image} width="750px" height="500px" alt="item-image" />
