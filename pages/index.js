@@ -28,7 +28,7 @@ const ReadAllItems = (props) => {
 }
 
 export const getServerSideProps = async() => {
-  const response = await fetch("sales-app-lac.vercel.app/api/item/readall")
+  const response = await fetch("https://https://sales-app-lac.vercel.app/api/item/readall")
   const allItems = await response.json()
 
   return{

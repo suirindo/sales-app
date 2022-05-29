@@ -13,7 +13,7 @@ const CreateItem = () => {
         event.preventDefault()
 
         try{
-            const response = await fetch("sales-app-lac.vercel.app/api/item/create",{
+            const response = await fetch("https://sales-app-lac.vercel.app/api/item/create",{
                 method: "POST",
                 headers: {
                     "Accept": "application/json",

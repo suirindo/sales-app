@@ -27,7 +27,7 @@ const ReadSingleItem = (props) => {
 export default ReadSingleItem
 
 export const getServerSideProps = async(context) => {
-    const response = await fetch(`sales-app-lac.vercel.app/api/item/${context.query.id}`)
+    const response = await fetch(`https://sales-app-lac.vercel.app/api/item/${context.query.id}`)
     const singleItem = await response.json()
 
 

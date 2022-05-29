@@ -6,7 +6,7 @@ const DeleteItem = (props) => {
     const handleSubmit = async(event) => {
         event.preventDefault()
         try{
-            const response = await fetch(`sales-app-lac.vercel.app/api/item/delete/${props.songleItem._id}`,{
+            const response = await fetch(`https://sales-app-lac.vercel.app/api/item/delete/${props.songleItem._id}`,{
                 method: "POST",
                 headers: {
                     "Accept": "application/json",
@@ -45,7 +45,7 @@ const DeleteItem = (props) => {
 export default DeleteItem
 
 export const getServerSideProps = async(context) => {
-    const response = await fetch(`sales-app-lac.vercel.app/api/item/${context.query.id}`)
+    const response = await fetch(`https://sales-app-lac.vercel.app/api/item/${context.query.id}`)
     const singleItem = await response.json()
 
     return {
