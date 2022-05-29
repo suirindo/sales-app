@@ -8,7 +8,7 @@ const Login = () => {
     const handleSubmit = async(event) => {
         event.preventDefault()
         try{
-            const response = await fetch("http://localhost:3000/api/user/login", {
+            const response = await fetch("https://sales-app-lac.vercel.app/api/user/login", {
                 method: "POST",
                 headers: {
                     "Accept": "application/json",
