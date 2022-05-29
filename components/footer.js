@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <footer>
-            <p>@{new DataTransfer().getFullYear()} Sale-App</p>
+            <p>@{new Date().getFullYear()} Sale-App</p>
         </footer>
     )
 }
