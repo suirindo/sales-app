@@ -11,7 +11,7 @@ const UpdateItem = (props) => {
     const handleSubmit = async(event) => {
         event.preventDefault()
         try{
-            const response = await fetch(`https://sales-app-lac.vercel.app/api/item/update/${props.songleItem._id}`,{
+            const response = await fetch(`https://sales-app-lac.vercel.app/api/item/update/${props.singleItem._id}`,{
                 method: "POST",
                 headers: {
                     "Accept": "application/json",

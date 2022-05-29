@@ -12,5 +12,4 @@ const getAllItems = async (req, res) => {
         return res.status(400).send({message: "アイテム読み取り失敗（オール）"})
     }
 }
-
 export default getAllItems

@@ -6,7 +6,7 @@ const DeleteItem = (props) => {
     const handleSubmit = async(event) => {
         event.preventDefault()
         try{
-            const response = await fetch(`https://sales-app-lac.vercel.app/api/item/delete/${props.songleItem._id}`,{
+            const response = await fetch(`https://sales-app-lac.vercel.app/api/item/delete/${props.singleItem._id}`,{
                 method: "POST",
                 headers: {
                     "Accept": "application/json",
@@ -39,7 +39,6 @@ const DeleteItem = (props) => {
     } else {
         return <h1>権限がありません</h1>
     }
-
 }
 
 export default DeleteItem
