@@ -5,11 +5,12 @@ const Register = () => {
     const [name, setName ] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [status1, setStatus1] = useState("")
 
     const handleSubmit = async(event) => {
         event.preventDefault()        
         try{
-            const response = await fetch("https://sales-app-lac.vercel.app/api/user/register",{
+            const response = await fetch("http://localhost:3000/api/user/register",{
                 method: "POST",
                 headers:{
                     "Accept" : "application/json",
@@ -34,6 +35,7 @@ const Register = () => {
             <form onSubmit = { handleSubmit }>
                 <input value = {name} onChange={(event) => setName(event.target.value)} type = "text" name="name" placeholder = "名前" required/>
                 <input value = {email} onChange={(event) => setEmail (event.target.value)} type = "text" name="email" placeholder = "メールアドレス" required/>
+                <label><input value = {status1} onChange={(event) => setStatus1 (event.target.value) }  type="radio" name="status" /> 採用担当者</label>
                 <input value = {password} onChange= {(event) => setPassword(event.target.value)} type = "text" name= "password" placeholder = "パスワード" required/>
                 <button>登録</button>
             </form>
