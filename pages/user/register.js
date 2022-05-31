@@ -6,6 +6,7 @@ const Register = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [status1, setStatus1] = useState("")
+    const [status2, setStatus2] = useState("")
 
     const handleSubmit = async(event) => {
         event.preventDefault()        
@@ -36,6 +37,7 @@ const Register = () => {
                 <input value = {name} onChange={(event) => setName(event.target.value)} type = "text" name="name" placeholder = "名前" required/>
                 <input value = {email} onChange={(event) => setEmail (event.target.value)} type = "text" name="email" placeholder = "メールアドレス" required/>
                 <label><input value = {status1} onChange={(event) => setStatus1 (event.target.value) }  type="radio" name="status" /> 採用担当者</label>
+                <label><input value = {status2} onChange={(event) => setStatus2 (event.target.value) }  type="radio" name="status" /> 営業</label>
                 <input value = {password} onChange= {(event) => setPassword(event.target.value)} type = "text" name= "password" placeholder = "パスワード" required/>
                 <button>登録</button>
             </form>
