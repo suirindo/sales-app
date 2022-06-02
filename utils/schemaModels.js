@@ -1,4 +1,5 @@
 import mongoose from "mongoose"
+import { isBinaryExpression } from "typescript"
 
 const Schema = mongoose.Schema
 
@@ -19,6 +20,14 @@ const UserSchema = new Schema({
         type: String,
         required: true,
         unique: true
+    },
+    status1: {
+        type: String,
+        required: false,
+    },
+    status2: {
+        type: String,
+        required: false,
     },
     password: {
         type: String,

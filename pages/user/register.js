@@ -20,7 +20,9 @@ const Register = () => {
                 body: JSON.stringify({
                     name: name,
                     email: email,
-                    password: password
+                    password: password,
+                    status1: status1,
+                    status2: status2
                 })
             })
             const jsonData = await response.json()
