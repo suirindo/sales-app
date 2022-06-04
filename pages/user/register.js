@@ -21,8 +21,8 @@ const Register = () => {
                     name: name,
                     email: email,
                     password: password,
-                    status1: status1,
-                    status2: status2
+                    status1: status1 = "採用担当者",
+                    status2: status2 = "営業"
                 })
             })
             const jsonData = await response.json()
@@ -30,7 +30,14 @@ const Register = () => {
         } catch(err){
             alert("ユーザー登録失敗")
         }
-    }
+
+	}
+function valueChange(event){
+  let checkValue = travelbox.elements['travel'].value;
+  console.log('選択されているのは ' + checkValue + ' です');
+}
+
+
     return (
         <div>
             <Head><title>ユーザー登録</title></Head>
@@ -43,6 +50,7 @@ const Register = () => {
                 <input value = {password} onChange= {(event) => setPassword(event.target.value)} type = "text" name= "password" placeholder = "パスワード" required/>
                 <button>登録</button>
             </form>
+
         </div>
     )
 }
